@@ -1,254 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Korada Saimadhan - Portfolio</title>
-  <link rel="icon" href="logo1.png" type="image/png">
-  <link rel="stylesheet" href="portstyle.css" />
-  <script src="portscript.js" defer></script>
-  <style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korada Saimadhan - Portfolio</title>
+    <link rel="icon" href="logo1.png" type="image/png">
+    <link rel="stylesheet" href="portstyle.css" />
+    <script src="portscript.js" defer></script>
+    <style>
+            #navbar {
+                width: 100%;
+                padding: 1rem 2rem;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #0056b3;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+                flex-wrap: wrap;
+            }
+
+            #navbar .brand {
+                font-size: 22px;
+                font-weight: bold;
+                color: white;
+                margin-right: auto;
+            }
+
+            #navbar ul {
+                display: flex;
+                gap: 1rem;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                flex-wrap: wrap;
+            }
+
+            #navbar ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 10px;
+                transition: color 0.3s;
+                font-size: 18px;
+            }
+
+            #navbar ul li a:hover {
+                color: #ffb700;
+            }
+
+            @media (max-width: 768px) {
+                #navbar {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 1rem;
+                }
+
+                #navbar ul {
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 0.5rem;
+                }
+
+                #navbar ul li {
+                    width: 100%;
+                }
+
+                #navbar ul li a {
+                    display: block;
+                    width: 100%;
+                    padding: 10px 0;
+                }
+            }
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
-    body {
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      background-image: url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?semt=ais_hybrid&w=740');
-      background-attachment: fixed;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI',
+            Tahoma,
+            Geneva,
+            Verdana,
+            sans-serif;
+        }
 
-    header {
-      margin-top: 30px;
-      background: linear-gradient(to right, #007BFF, #00c6ff);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 23px;
-    }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            background-image: url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?semt=ais_hybrid&w=740');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-    header img {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
+        header {
+            margin-top: 30px;
+            background: linear-gradient(to right, #007BFF, #00c6ff);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 23px;
+        }
 
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      justify-content: center;
-    }
+        header img {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
 
-    nav ul li {
-      margin: 0.5rem 1rem;
-    }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: center;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-      padding: 40px;
-    }
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
 
-    nav ul li a:hover {
-      color: #ffb700;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 40px;
+        }
 
-    .section {
-      padding: 2rem 1rem;
-    }
+        nav ul li a:hover {
+            color: #ffb700;
+        }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      font-size: 23px;
-      padding: 0 1rem;
-    }
+        .section {
+            padding: 2rem 1rem;
+        }
 
-    h2 {
-      margin-bottom: 1rem;
-      color: #0056b3;
-    }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            font-size: 23px;
+            padding: 0 1rem;
+        }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      list-style: none;
-    }
+        h2 {
+            margin-bottom: 1rem;
+            color: #0056b3;
+        }
 
-    .skills li {
-      background-color: #007BFF;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 23px;
-    }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+        }
 
-    .logo {
-      width: 400px;
-      height: 300px;
-    }
+        .skills li {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 23px;
+        }
 
-    .logo-row {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1rem;
-      height: 50px;
-    }
+        .logo {
+            width: 400px;
+            height: 300px;
+        }
 
-    .logo-row img {
-      height: 50px;
-    }
+        .logo-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            height: 50px;
+        }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      font-size: 23px;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+        .logo-row img {
+            height: 50px;
+        }
 
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            font-size: 23px;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
 
-    #navbar {
-      height: 35px;
-      width: 100%;
-      padding: 20px 40px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      background-color: #0056b3;
-    }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @keyframes bgGradient {
+            0% {
+                background-position: 0% 50%;
+            }
 
-    @keyframes bgGradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-  </style>
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <img src="./images/PassPort_Size Pics.jpg" alt="Korada Saimadhan" />
-      <h1 style="font-size: 33px;">Korada Saimadhan</h1>
-      <p style="font-size: 25px;">Electronics & Communication Engineer | VLSI & Web development Enthusiast</p>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <img src="./images/PassPort_Size Pics.jpg" alt="Korada Saimadhan" />
+            <h1 style="font-size: 33px;">Korada Saimadhan</h1>
+            <p style="font-size: 25px;">Electronics & Communication Engineer | VLSI & Web development Enthusiast</p>
+        </div>
+    </header>
 
-  <nav id="navbar">
-    <ul style="font-size: 22px;">
-      <li><b style="margin-right: 250px; color: white;">👩‍🎓 MADHAN</b></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#internships">Internships</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h2 style="font-size: 33px;">About Me</h2>
-      <p style="font-size: 22px;">Hi! I’m Korada Saimadhan, a final-year ECE student at Andhra University with a strong foundation in programming and hardware design. I recently completed internships at BSNL and SkillDzire and am passionate about building a career in VLSI design.</p>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="skills" style="font-size: 33px;">
-        <li>HTML<br/><img class="logo-row" src="https://img.icons8.com/?size=100&id=aDQAeI8R62cC&format=png&color=000000" alt="HTML"></li>
-        <li>CSS<br/><img class="logo-row" src="https://img.icons8.com/?size=100&id=1045&format=png&color=000000" alt="CSS"></li>
-        <li>JavaScript<br/><img class="logo-row" src="https://img.icons8.com/?size=100&id=tGvHBPJaKqEd&format=png&color=000000" alt="JavaScript"></li>
-        <li>C Language<br/><img class="logo-row" src="https://img.icons8.com/?size=512&id=40670&format=png" alt="C Language"></li>
-        <li>MySQL<br/><img class="logo-row" src="https://img.icons8.com/?size=100&id=NFQusZJ4neki&format=png&color=000000" alt="MySQL"></li>
-        <li>MATLAB<br/><img class="logo-row" src="https://img.icons8.com/?size=100&id=r5Y16PcDkoWI&format=png&color=000000" alt="MATLAB"></li>
-        <li>Verilog HDL<br/><img class="logo-row" src="https://cdn.freebiesupply.com/logos/large/2x/vlsi-logo-png-transparent.png" alt="Verilog"></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education" class="section">
-    <div class="container">
-      <h2 style="font-size: 22px;">Education</h2>
-      <p style="font-size: 22px;"><strong>B.Tech in ECE</strong> – Andhra University (2022–2026)</p>
-      <p style="font-size: 22px;"><strong>Intermediate (MPC)</strong> – Sri Chaitanya Jr. College (2020–2022)</p>
-      <p style="font-size: 22px;"><strong>SSC</strong> – Kranthi Vidyanikethan School (2019–2020)</p>
-    </div>
-  </section>
-
-  <section id="internships" class="section">
-    <div class="container">
-      <h1 style="font-size: 33px;">Internships</h1>
-
-      <strong style="font-size: 22px;">BSNL Intern (May–June 2024)</strong>
-      <div style="display:flex;">
-        <img id="bsnl" class="logo" src="https://download.logo.wine/logo/Bharat_Sanchar_Nigam_Limited/Bharat_Sanchar_Nigam_Limited-Logo.wine.png" alt="BSNL">
-        <ul style="margin-top: 48px; font-size: 22px;">
-          <li>Worked with telecom infrastructure including GSM, broadband, optical fiber.</li>
-          <li>Mobile communication systems like GSM, CDMA, and LTE architecture.</li>
-          <li>Broadband technologies, including DSL, fiber optics, and Wi-Fi</li>
-          <li>Digital switching and transmission systems used in telecom exchanges</li>
-          <li>IP networking and cybersecurity fundamentals</li>
-          <li>Hands-on exposure to telecom infrastructure like BTS, MSC, and telephone exchanges</li>
+    <nav id="navbar">
+        <div class="brand">👩‍🎓 MADHAN</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+    </nav>
 
-      <strong style="font-size: 22px;">VLSI Intern – SkillDzire (May–June 2025)</strong>
-      <div style="display:flex;">
-        <img id="skilldzire" class="logo" src="./images/skilldzire.png" alt="SkillDzire">
-        <ul style="font-size: 22px;">
-          <li>Designed UART, FIFO, FSM controllers using Verilog HDL.</li>
-          <li>Understanding how transistors and logic gates form the foundation of integrated circuits.</li>
-          <li>Writing hardware description code using Verilog or VHDL.</li>
-          <li>Using tools like Cadence or Synopsys for schematic, layout, and simulation.</li>
-          <li>Performing timing analysis, functional verification, and debugging designs.</li>
-          <li>Gaining exposure to CMOS technology and fabrication processes.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>📩 Email: koradasaimadhan@gmail.com</p>
-      <p>📱 Phone: 9533107089</p>
-      <p>📍 Location: Madapam, Srikakulam</p>
-    </div>
-  </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 style="font-size: 33px;">About Me</h2>
+            <p style="font-size: 22px;">Hi! I’m Korada Saimadhan, a final-year ECE student at Andhra University with a
+                strong foundation in programming and hardware design. I recently completed internships at BSNL and
+                SkillDzire and am passionate about building a career in VLSI design.</p>
+        </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Korada Saimadhan. All rights reserved.</p>
-    </div>
-  </footer>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills" style="font-size: 33px;">
+                <li>HTML<br /><img class="logo-row"
+                        src="https://img.icons8.com/?size=100&id=aDQAeI8R62cC&format=png&color=000000" alt="HTML"></li>
+                <li>CSS<br /><img class="logo-row"
+                        src="https://img.icons8.com/?size=100&id=1045&format=png&color=000000" alt="CSS"></li>
+                <li>JavaScript<br /><img class="logo-row"
+                        src="https://img.icons8.com/?size=100&id=tGvHBPJaKqEd&format=png&color=000000" alt="JavaScript">
+                </li>
+                <li>C Language<br /><img class="logo-row" src="https://img.icons8.com/?size=512&id=40670&format=png"
+                        alt="C Language"></li>
+                <li>MySQL<br /><img class="logo-row"
+                        src="https://img.icons8.com/?size=100&id=NFQusZJ4neki&format=png&color=000000" alt="MySQL"></li>
+                <li>MATLAB<br /><img class="logo-row"
+                        src="https://img.icons8.com/?size=100&id=r5Y16PcDkoWI&format=png&color=000000" alt="MATLAB">
+                </li>
+                <li>Verilog HDL<br /><img class="logo-row"
+                        src="https://cdn.freebiesupply.com/logos/large/2x/vlsi-logo-png-transparent.png" alt="Verilog">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 style="font-size: 22px;">Education</h2>
+            <p style="font-size: 22px;"><strong>B.Tech in ECE</strong> – Andhra University (2022–2026)</p>
+            <p style="font-size: 22px;"><strong>Intermediate (MPC)</strong> – Sri Chaitanya Jr. College (2020–2022)</p>
+            <p style="font-size: 22px;"><strong>SSC</strong> – Kranthi Vidyanikethan School (2019–2020)</p>
+        </div>
+    </section>
+
+    <section id="internships" class="section">
+        <div class="container">
+            <h1 style="font-size: 33px;">Internships</h1>
+
+            <strong style="font-size: 22px;">BSNL Intern (May–June 2024)</strong>
+            <div style="display:flex;">
+                <img id="bsnl" class="logo"
+                    src="https://download.logo.wine/logo/Bharat_Sanchar_Nigam_Limited/Bharat_Sanchar_Nigam_Limited-Logo.wine.png"
+                    alt="BSNL">
+                <ul style="margin-top: 48px; font-size: 22px;">
+                    <li>Worked with telecom infrastructure including GSM, broadband, optical fiber.</li>
+                    <li>Mobile communication systems like GSM, CDMA, and LTE architecture.</li>
+                    <li>Broadband technologies, including DSL, fiber optics, and Wi-Fi</li>
+                    <li>Digital switching and transmission systems used in telecom exchanges</li>
+                    <li>IP networking and cybersecurity fundamentals</li>
+                    <li>Hands-on exposure to telecom infrastructure like BTS, MSC, and telephone exchanges</li>
+                </ul>
+            </div>
+
+            <strong style="font-size: 22px;">VLSI Intern – SkillDzire (May–June 2025)</strong>
+            <div style="display:flex;">
+                <img id="skilldzire" class="logo" src="./images/skilldzire.png" alt="SkillDzire">
+                <ul style="font-size: 22px;">
+                    <li>Designed UART, FIFO, FSM controllers using Verilog HDL.</li>
+                    <li>Understanding how transistors and logic gates form the foundation of integrated circuits.</li>
+                    <li>Writing hardware description code using Verilog or VHDL.</li>
+                    <li>Using tools like Cadence or Synopsys for schematic, layout, and simulation.</li>
+                    <li>Performing timing analysis, functional verification, and debugging designs.</li>
+                    <li>Gaining exposure to CMOS technology and fabrication processes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>📩 Email: koradasaimadhan@gmail.com</p>
+            <p>📱 Phone: 9533107089</p>
+            <p>📍 Location: Madapam, Srikakulam</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Korada Saimadhan. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
