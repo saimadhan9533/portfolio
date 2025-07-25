@@ -8,6 +8,167 @@
   <link rel="stylesheet" href="portstyle.css" />
   <link rel="JavaScript" href="portscript.js" />
 </head>
+  <style>
+        
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      margin-top: 30px ;
+      background: linear-gradient(to right, #007BFF, #00c6ff);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 23px;
+    }
+
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      padding: 40px;
+    }
+
+    nav ul li a:hover {
+      color: #ffb700;
+    }
+
+    .section {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      font-size: 23px;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #0056b3;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .skills li {
+      background-color: #007BFF;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 23px;
+    }
+    .logo{
+      width: 400px;
+      height: 300px;
+    
+    }
+    .logo-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      height: 50px;
+    }
+
+    .logo-row img {
+      height: 50px;
+    }
+   /* #me {
+         width: 200px;
+         height: 230px;
+         box-shadow: 2px 2px 4px 4px #007BFF;
+         }
+*/
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      font-size: 23px;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+#navbar {
+  height: 35px;
+  width: 100%;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: #0056b3;
+}
+#body {
+  background-image:  url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?semt=ais_hybrid&w=740');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333;
+  /* line-height: 1.6;
+  background: linear-gradient(270deg, #001f3f, #007BFF, #00c6ff);
+  background-size: 600% 600%;
+  animation: bgGradient 20s ease infinite;
+} */
+}
+
+@keyframes bgGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+  </style>
 <body id="body">
   <header>
     <div class="container">
