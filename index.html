@@ -6,26 +6,28 @@
   <title>Korada Saimadhan - Portfolio</title>
   <link rel="icon" href="logo1.png" type="image/png">
   <link rel="stylesheet" href="portstyle.css" />
-  <link rel="JavaScript" href="portscript.js" />
-</head>
+  <script src="portscript.js" defer></script>
   <style>
-        
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      
     }
 
     body {
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
+      background-image: url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?semt=ais_hybrid&w=740');
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     header {
-      margin-top: 30px ;
+      margin-top: 30px;
       background: linear-gradient(to right, #007BFF, #00c6ff);
       color: white;
       padding: 2rem 1rem;
@@ -38,7 +40,6 @@
       border-radius: 50%;
       margin-bottom: 1rem;
     }
-
 
     nav ul {
       display: flex;
@@ -93,11 +94,12 @@
       border-radius: 20px;
       font-size: 23px;
     }
-    .logo{
+
+    .logo {
       width: 400px;
       height: 300px;
-    
     }
+
     .logo-row {
       display: flex;
       gap: 20px;
@@ -111,12 +113,7 @@
     .logo-row img {
       height: 50px;
     }
-   /* #me {
-         width: 200px;
-         height: 230px;
-         box-shadow: 2px 2px 4px 4px #007BFF;
-         }
-*/
+
     footer {
       background-color: #333;
       color: white;
@@ -132,44 +129,31 @@
         align-items: center;
       }
     }
-#navbar {
-  height: 35px;
-  width: 100%;
-  padding: 20px 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  background-color: #0056b3;
-}
-#body {
-  background-image:  url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?semt=ais_hybrid&w=740');
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #333;
-  /* line-height: 1.6;
-  background: linear-gradient(270deg, #001f3f, #007BFF, #00c6ff);
-  background-size: 600% 600%;
-  animation: bgGradient 20s ease infinite;
-} */
-}
 
-@keyframes bgGradient {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+    #navbar {
+      height: 35px;
+      width: 100%;
+      padding: 20px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background-color: #0056b3;
+    }
 
-
-
+    @keyframes bgGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
   </style>
-<body id="body">
+</head>
+
+<body>
   <header>
     <div class="container">
       <img src="./images/PassPort_Size Pics.jpg" alt="Korada Saimadhan" />
@@ -192,8 +176,7 @@
   <section id="about" class="section">
     <div class="container">
       <h2 style="font-size: 33px;">About Me</h2>
-      <p style="display: flex;font-size: 22px;">Hi! I’m Korada Saimadhan, a final-year ECE student at Andhra University with a strong foundation in programming and hardware design. I recently completed internships at BSNL and SkillDzire and am passionate about building a career in VLSI design.
-        <!-- <img id="me" src="C:\Users\DELL\OneDrive\Pictures\PassPort_Size Pics.jpg" alt="Korada Saimadhan" /></p> -->
+      <p style="font-size: 22px;">Hi! I’m Korada Saimadhan, a final-year ECE student at Andhra University with a strong foundation in programming and hardware design. I recently completed internships at BSNL and SkillDzire and am passionate about building a career in VLSI design.</p>
     </div>
   </section>
 
@@ -209,7 +192,6 @@
         <li>MATLAB<br/><img class="logo-row" src="https://img.icons8.com/?size=100&id=r5Y16PcDkoWI&format=png&color=000000" alt="MATLAB"></li>
         <li>Verilog HDL<br/><img class="logo-row" src="https://cdn.freebiesupply.com/logos/large/2x/vlsi-logo-png-transparent.png" alt="Verilog"></li>
       </ul>
-      
     </div>
   </section>
 
@@ -225,21 +207,23 @@
   <section id="internships" class="section">
     <div class="container">
       <h1 style="font-size: 33px;">Internships</h1>
+
       <strong style="font-size: 22px;">BSNL Intern (May–June 2024)</strong>
       <div style="display:flex;">
         <img id="bsnl" class="logo" src="https://download.logo.wine/logo/Bharat_Sanchar_Nigam_Limited/Bharat_Sanchar_Nigam_Limited-Logo.wine.png" alt="BSNL">
         <ul style="margin-top: 48px; font-size: 22px;">
-            <li>Worked with telecom infrastructure including GSM, broadband, optical fiber.</li>
-            <li>Mobile communication systems like GSM, CDMA, and LTE architecture.</li>
-            <li>Broadband technologies, including DSL, fiber optics, and Wi-Fi</li>
-            <li>Digital switching and transmission systems used in telecom exchanges</li>
-            <li>IP networking and cybersecurity fundamentals</li>
-            <li>Hands-on exposure to telecom infrastructure like BTS, MSC, and telephone exchanges</li>
-          </ul>
-    </div>
-      <p><strong style="font-size: 22px;">VLSI Intern – SkillDzire (May–June 2025)</strong>
-        <div style="display:flex;">
-            <img id="skilldzire" class="logo" src="./images/skilldzire.png" alt="SkillDzire"></p>
+          <li>Worked with telecom infrastructure including GSM, broadband, optical fiber.</li>
+          <li>Mobile communication systems like GSM, CDMA, and LTE architecture.</li>
+          <li>Broadband technologies, including DSL, fiber optics, and Wi-Fi</li>
+          <li>Digital switching and transmission systems used in telecom exchanges</li>
+          <li>IP networking and cybersecurity fundamentals</li>
+          <li>Hands-on exposure to telecom infrastructure like BTS, MSC, and telephone exchanges</li>
+        </ul>
+      </div>
+
+      <strong style="font-size: 22px;">VLSI Intern – SkillDzire (May–June 2025)</strong>
+      <div style="display:flex;">
+        <img id="skilldzire" class="logo" src="./images/skilldzire.png" alt="SkillDzire">
         <ul style="font-size: 22px;">
           <li>Designed UART, FIFO, FSM controllers using Verilog HDL.</li>
           <li>Understanding how transistors and logic gates form the foundation of integrated circuits.</li>
@@ -248,7 +232,7 @@
           <li>Performing timing analysis, functional verification, and debugging designs.</li>
           <li>Gaining exposure to CMOS technology and fabrication processes.</li>
         </ul>
-      
+      </div>
     </div>
   </section>
 
