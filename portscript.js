@@ -1,24 +1,30 @@
+const skills = [
+  { name: "HTML", icon: "https://img.icons8.com/color/96/html-5.png" },
+  { name: "CSS", icon: "https://img.icons8.com/color/96/css3.png" },
+  { name: "JavaScript", icon: "https://img.icons8.com/color/96/javascript.png" },
+  { name: "React", icon: "https://img.icons8.com/color/96/react-native.png" },
+  { name: "Node.js", icon: "https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000" },
+  { name: "MySQL", icon: "https://img.icons8.com/ios/100/mysql.png" },
+  {name:"Matlab",icon:"https://img.icons8.com/?size=100&id=r5Y16PcDkoWI&format=png&color=000000"},
+  { name: "VLSI", icon: "https://cdn.freebiesupply.com/logos/large/2x/vlsi-logo-png-transparent.png" }
+];
 
-    // script.js
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-    
-  function selectVideoByTime() {
-  const hour = new Date().getHours();
-  if (hour >= 6 && hour < 12) return 'morning.mp4';
-  if (hour >= 12 && hour < 17) return 'afternoon.mp4';
-  if (hour >= 17 && hour < 20) return 'evening.mp4';
-  return 'night.mp4';
-}
+const container = document.getElementById("skills-container");
 
-const bgVideo = document.createElement('video');
-bgVideo.src = `./images/${selectVideoByTime()}`;
-bgVideo.autoplay = bgVideo.loop = bgVideo.muted = true;
-bgVideo.style = 'position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;';
-document.body.prepend(bgVideo);
+skills.forEach(skill => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const img = document.createElement("img");
+  img.src = skill.icon;
+  img.alt = skill.name;
+
+  const title = document.createElement("p");
+  title.textContent = skill.name;
+  title.style.margin = "10px 0 0";
+  title.style.fontWeight = "bold";
+
+  card.appendChild(img);
+  card.appendChild(title);
+  container.appendChild(card);
+});
